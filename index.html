@@ -133,35 +133,52 @@
     .project-view{background:linear-gradient(140deg,rgba(10,16,27,.86),rgba(13,17,29,.79));border-color:rgba(190,207,250,.19)}
     .project h3,.projects-heading h2{filter:drop-shadow(0 8px 18px rgba(1,4,13,.6))}
     .project-note{font:10px var(--mono);letter-spacing:.085em;color:#b1bfd9}
-    .scraping-view{padding:24px 30px}
-    .data-panel{width:100%;max-width:590px;background:#0c1321;border:1px solid rgba(148,176,229,.34);box-shadow:0 32px 65px rgba(0,0,0,.48);border-radius:6px;transform:perspective(1050px) rotateY(-5deg) rotateX(3deg);transition:transform .45s;overflow:hidden}
-    .project:hover .data-panel{transform:perspective(1050px) rotateY(0) rotateX(0)}
-    .data-panel-top{height:36px;background:#182339;display:flex;align-items:center;justify-content:space-between;padding:0 17px;font:10px var(--mono);letter-spacing:.10em;color:#d4dffd;border-bottom:1px solid #ffffff18}
-    .panel-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#9ac8eb;margin-right:10px;box-shadow:0 0 12px #96bdf6}
-    .panel-muted{color:#889ab7}.panel-signal{color:#9bdab7;font-size:9px}
-    .data-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#27324a;border-bottom:1px solid #263651}
-    .data-summary>div{background:#121b2b;padding:18px 16px 15px}
-    .data-summary strong{font-size:clamp(22px,2.4vw,34px);font-weight:550;line-height:1;display:block;letter-spacing:-.06em}
-    .data-summary small{display:block;margin-top:7px;font:9px var(--mono);color:#9daec9;letter-spacing:.04em}
-    .data-table{padding:13px 18px 5px}
-    .data-row{display:grid;grid-template-columns:1fr .75fr 1fr;gap:10px;font:10px/1.8 var(--mono);color:#aebfda;padding:5px 0;border-bottom:1px solid #ffffff0d}
-    .data-row.data-header{font-size:9px;color:#7388a9;letter-spacing:.08em}
-    .data-ok{color:#a2d5b7}
-    .data-pipeline{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:13px 18px;background:#111b2b;font:9px var(--mono);color:#c7d6f2;letter-spacing:.04em}
-    .data-pipeline b{color:#8fabc5;font-size:16px}
+    #premier-pulse-project .pulse-view{height:auto;padding:22px;min-height:340px;background:radial-gradient(ellipse at 15% 90%,rgba(153,203,98,.09),transparent 65%),linear-gradient(140deg,rgba(10,16,27,.94),rgba(13,17,29,.86))}
+    #premier-pulse-project .pulse-dashboard{width:100%;max-width:590px;min-width:0;background:#0d131c;border:1px solid #9eb8d345;border-radius:8px;box-shadow:0 24px 60px #01040d85;overflow:hidden}
+    #premier-pulse-project .pulse-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;border-bottom:1px solid #c5d4f21a;background:linear-gradient(110deg,#1a2531,#121b29)}
+    #premier-pulse-project .pulse-brand{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:-.03em;white-space:nowrap}
+    #premier-pulse-project .pulse-mark{display:grid;place-items:center;width:25px;height:25px;border-radius:7px;background:#c5ed8c;color:#152414;font:700 17px var(--sans)}
+    #premier-pulse-project .pulse-preview{font:8px var(--mono);color:#a8b7cb;letter-spacing:.10em;text-align:right}
+    #premier-pulse-project .pulse-content{padding:16px}
+    #premier-pulse-project .pulse-kicker{font:8px var(--mono);letter-spacing:.14em;color:#a6b9ce;margin:0 0 12px}
+    #premier-pulse-project .pulse-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 15px}
+    #premier-pulse-project .pulse-metrics>div{padding:11px 10px;background:#151e2a;border:1px solid #c0d3f016;border-radius:5px;min-width:0}
+    #premier-pulse-project .pulse-metrics dt{font:7px/1.5 var(--mono);letter-spacing:.035em;color:#9cadc3}
+    #premier-pulse-project .pulse-metrics dd{font-size:clamp(19px,1.8vw,26px);letter-spacing:-.06em;line-height:1.1;margin:6px 0 0;color:#edf3ff}
+    #premier-pulse-project .pulse-metrics>div:last-child dd{color:#c5ed8c}
+    #premier-pulse-project .pulse-fixture{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;border:1px solid #b7d59826;border-radius:6px;background:radial-gradient(ellipse at 17% 90%,#b8e77d0d,transparent 65%),#111b20;overflow:hidden}
+    #premier-pulse-project .pulse-fixture:before{content:'';position:absolute;width:80px;height:80px;border:1px solid #b8d6bd12;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none}
+    #premier-pulse-project .pulse-team{position:relative;display:flex;align-items:center;gap:9px;font-size:12px;font-weight:550;letter-spacing:-.025em}
+    #premier-pulse-project .pulse-team:last-child{flex-direction:row-reverse;text-align:right}
+    #premier-pulse-project .pulse-badge{display:grid;place-items:center;width:34px;height:38px;border:1px solid #c5ed8c26;border-radius:8px 8px 13px 13px;background:linear-gradient(140deg,#c5ed8c26,#c5ed8c05);font:11px var(--mono);color:#c5ed8c}
+    #premier-pulse-project .pulse-team:last-child .pulse-badge{color:#b5caff;border-color:#b5caff26;background:linear-gradient(140deg,#b5caff26,#b5caff05)}
+    #premier-pulse-project .pulse-versus{position:relative;font:9px var(--mono);color:#8597a7}
+    #premier-pulse-project .pulse-outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 0}
+    #premier-pulse-project .pulse-outcomes>div{min-width:0}
+    #premier-pulse-project .pulse-outcomes dt{font:8px var(--mono);color:#9badc4}
+    #premier-pulse-project .pulse-outcomes dd{font:500 18px var(--sans);letter-spacing:-.05em;margin:5px 0 0;color:#c5ed8c}
+    #premier-pulse-project .pulse-outcomes>div:nth-child(2) dd{color:#c1b4e8}
+    #premier-pulse-project .pulse-outcomes>div:last-child dd{color:#b5caff}
+    #premier-pulse-project .pulse-bar{display:block;height:3px;margin-top:8px;background:#a6c0e414;border-radius:2px;overflow:hidden}
+    #premier-pulse-project .pulse-bar:after{content:'';display:block;width:45%;height:100%;background:#c5ed8c}
+    #premier-pulse-project .pulse-outcomes>div:nth-child(2) .pulse-bar:after{width:25.3%;background:#c1b4e8}
+    #premier-pulse-project .pulse-outcomes>div:last-child .pulse-bar:after{width:29.6%;background:#b5caff}
+    #premier-pulse-project .pulse-bottom{display:flex;justify-content:space-between;gap:8px;padding:10px 16px;border-top:1px solid #c5d4f218;color:#8fa3be;font:7px/1.5 var(--mono);letter-spacing:.04em}
     @media(max-width:920px){.intro-text{width:82%}}
     @media(max-width:650px){
       #flow-art{opacity:.84}
       .intro-text{width:100%}
       .intro-copy{background:rgba(7,10,19,.14)}
       .project{backdrop-filter:none}
-      .scraping-view{padding:15px}
-      .data-summary>div{padding:12px 8px}
-      .data-summary small{font-size:7px}
-      .data-panel-top{font-size:8px}
-      .data-table{padding:12px 12px 3px}
-      .data-row{font-size:9px}
-      .data-pipeline{padding:10px;gap:3px;font-size:8px}
+      #premier-pulse-project .pulse-view{padding:13px;min-height:356px}
+      #premier-pulse-project .pulse-top{padding:12px}
+      #premier-pulse-project .pulse-content{padding:13px 12px}
+      #premier-pulse-project .pulse-fixture{padding:14px 10px;gap:8px}
+      #premier-pulse-project .pulse-team{font-size:11px;gap:6px}
+      #premier-pulse-project .pulse-badge{width:29px;height:34px;font-size:10px}
+      #premier-pulse-project .pulse-metrics>div{padding:10px 7px}
+      #premier-pulse-project .pulse-metrics dd{font-size:clamp(18px,5.5vw,23px)}
+      #premier-pulse-project .pulse-bottom{padding:10px 12px;font-size:6px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
@@ -232,8 +249,8 @@
 #contact .cv-watermark{font-size:clamp(56px,6vw,84px)!important;letter-spacing:-.09em!important}
 #contact .cv-pane{min-height:310px!important}
 /* No jump, enlargement, or zoom on hover. */
-.project:hover .browser,.project:hover .terminal,.project:hover .data-panel{transform:none!important}
-.project .browser,.project .terminal,.project .data-panel{transform:none!important;transition:border-color .25s ease!important}
+.project:hover .browser,.project:hover .terminal{transform:none!important}
+.project .browser,.project .terminal{transform:none!important;transition:border-color .25s ease!important}
 #contact .cv-pane:hover,#contact .cv-pane{transform:none!important}
 #contact .channel:hover{padding-left:0!important}
 #contact .email-link:hover .email-arrow,#contact .channel:hover .arrow{transform:none!important}
@@ -317,27 +334,24 @@
 </div>
 </div>
 </article>
-<article class="project reveal" id="web-scraping-project">
+<article aria-labelledby="premier-pulse-title" class="project reveal" id="premier-pulse-project">
 <div class="project-info">
-<div class="project-number">003  /  DATA ANALYSIS</div>
-<h3>Web Scraping<br/><small>&amp; Data Mining</small></h3>
-<p class="project-desc">Collected and organized 300 book listings from 20 pages of Books to Scrape. Cleaned the dataset and explored pricing patterns with regression, classification and K-means clustering.</p>
-<div class="stack"><span>Python</span><span>BeautifulSoup</span><span>pandas</span><span>scikit-learn</span></div>
-<div class="project-actions"><span class="project-note">300 BOOKS   /   20 PAGES   /   CSV + EXCEL</span></div>
+<div class="project-number">003  /  FOOTBALL INTELLIGENCE</div>
+<h3 id="premier-pulse-title">Premier Pulse<br/><small>Prediction &amp; Analytics</small></h3>
+<p class="project-desc">An interactive Premier League dashboard for home win, draw and away win predictions, team comparisons and match analytics. Collects and processes 2,740 historical matches across 8 seasons, with a trained Logistic Regression model achieving 45.5% accuracy on a historical held-out test set.</p>
+<div class="stack"><span>Python</span><span>Streamlit</span><span>pandas</span><span>scikit-learn</span></div>
+<div class="project-actions"><a href="https://premier-pulse-fckfvud7gcswes4yul3jv.streamlit.app" rel="noopener noreferrer" target="_blank">LIVE DEMO ↗</a><a href="https://github.com/Azhen129/premier-pulse" rel="noopener noreferrer" target="_blank">GITHUB ↗</a></div>
 </div>
-<div aria-label="Illustration of the book data collection and analysis pipeline" class="project-view scraping-view">
-<div class="data-panel">
-<div class="data-panel-top"><span><span class="panel-dot"></span>BOOK DATASET <span class="panel-muted">/ ANALYTICS</span></span><span class="panel-signal">DATA READY</span></div>
-<div class="data-summary"><div><strong>300</strong><small>BOOK RECORDS</small></div><div><strong>20</strong><small>PAGES</small></div><div><strong>05</strong><small>DATA FIELDS</small></div></div>
-<div class="data-table">
-<div class="data-row data-header"><span>FIELD</span><span>TYPE</span><span>PIPELINE</span></div>
-<div class="data-row"><span>title</span><span>text</span><span class="data-ok">EXTRACTED</span></div>
-<div class="data-row"><span>price</span><span>numeric</span><span class="data-ok">CLEANED</span></div>
-<div class="data-row"><span>rating</span><span>ordinal</span><span class="data-ok">ENCODED</span></div>
-<div class="data-row"><span>availability</span><span>text</span><span class="data-ok">EXTRACTED</span></div>
-<div class="data-row"><span>link</span><span>URL</span><span class="data-ok">EXTRACTED</span></div>
+<div aria-label="Premier Pulse dashboard preview with an example Arsenal versus Liverpool forecast" class="project-view pulse-view" role="group">
+<div class="pulse-dashboard">
+<div class="pulse-top"><span class="pulse-brand"><span aria-hidden="true" class="pulse-mark">P</span>Premier Pulse</span><span class="pulse-preview">DASHBOARD PREVIEW</span></div>
+<div class="pulse-content">
+<p class="pulse-kicker">THE GAME. IN NUMBERS.</p>
+<dl class="pulse-metrics"><div><dt>MATCHES</dt><dd>2,740</dd></div><div><dt>SEASONS</dt><dd>8</dd></div><div><dt>TEST ACCURACY</dt><dd>45.5%</dd></div></dl>
+<div class="pulse-fixture"><span class="pulse-team"><span aria-hidden="true" class="pulse-badge">ARS</span>Arsenal</span><span class="pulse-versus">VS</span><span class="pulse-team"><span aria-hidden="true" class="pulse-badge">LIV</span>Liverpool</span></div>
+<dl class="pulse-outcomes"><div><dt>HOME WIN</dt><dd>45.0%<span aria-hidden="true" class="pulse-bar"></span></dd></div><div><dt>DRAW</dt><dd>25.3%<span aria-hidden="true" class="pulse-bar"></span></dd></div><div><dt>AWAY WIN</dt><dd>29.6%<span aria-hidden="true" class="pulse-bar"></span></dd></div></dl>
 </div>
-<div class="data-pipeline"><span>SCRAPE</span><b>›</b><span>CLEAN</span><b>›</b><span>ANALYZE</span><b>›</b><span>EXPORT</span></div>
+<div class="pulse-bottom"><span>LOGISTIC REGRESSION / STREAMLIT</span><span>EXAMPLE FORECAST</span></div>
 </div>
 </div>
 </article>
